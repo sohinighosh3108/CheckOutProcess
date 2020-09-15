@@ -54,7 +54,7 @@ namespace CheckOutProcess.Core
         }
         public Item SearchItemById(char id)
         {
-            var item = CartItems.FirstOrDefault(i => i.SKUId == id);
+            var item = CartItems.FirstOrDefault(i => i.SKU == id);
             return item;
         }
     }

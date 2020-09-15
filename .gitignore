@@ -1,1 +1,6 @@
 CheckOutProcess.Data/obj
+CheckOutProcess.Core/obj
+CheckOutProcess.Test/obj
+CheckOutProcess.Data/bin
+CheckOutProcess.Core/bin
+CheckOutProcess.Test/bin

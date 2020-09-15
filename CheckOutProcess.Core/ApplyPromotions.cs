@@ -24,7 +24,7 @@ namespace CheckOutProcess.Core
             int priceAfterSinglePromotion = 0;
             foreach (var item in items)
             {
-                var itemPromotion = promotions.FirstOrDefault(p => p.PrimarySKUId == item.SKU && p.PromotionType=="Single");
+                var itemPromotion = promotions.FirstOrDefault(p => p.PrimarySKUId == item.SKU && p.PromoType=="Single");
                 if (itemPromotion != null && item.Quantity>=itemPromotion.PromoQty)
                 {
                     int promotionQty = itemPromotion.PromoQty;
@@ -43,7 +43,7 @@ namespace CheckOutProcess.Core
                 var itemPromotion = promotions.FirstOrDefault(p => p.PrimarySKUId == item.SKU && p.PromoType == "Pair" && p.SecondarySKUId != '\0');
                 if (itemPromotion != null)
                 {
-                    var secondarySKUID = promotions.FirstOrDefault(p => p.PrimarySKUId == item.SKU && p.Promoype == "Pair").SecondarySKUId;
+                    var secondarySKUID = promotions.FirstOrDefault(p => p.PrimarySKUId == item.SKU && p.PromoType == "Pair").SecondarySKUId;
                     int primaryQty = item.Quantity;
                     int primaryPrice = item.Price;
                     int secondaryQty = items.FirstOrDefault(i => i.SKU == secondarySKUID).Quantity;

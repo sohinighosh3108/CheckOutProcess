@@ -27,9 +27,9 @@ namespace CheckOutProcess.Data
             }
             promotions = new List<Promotions>()
             {
-                new Promotions{Promotion=1, PromoType="Single",PromoDetails="3 'A's priced at 130",PrimarySKUId='A', PromoPrice=130, PromoQty=3},
-                new Promotions{Promotion=2,PromoType="Single", PromoDetails="2 'B's priced at 45", PrimarySKUId='B', PromoPrice=45,PromoQty=2},
-                new Promotions{Promotion=3, PromoType="Pair", PromoDetails="C+D priced at 30", PrimarySKUId='C',SecondarySKUId='D', PromoPrice=30, PromoQty=1 }
+                new Promotions{PromoId=1, PromoType="Single",PromoDetails="3 'A's priced at 130",PrimarySKUId='A', PromoPrice=130, PromoQty=3},
+                new Promotions{PromoId=2,PromoType="Single", PromoDetails="2 'B's priced at 45", PrimarySKUId='B', PromoPrice=45,PromoQty=2},
+                new Promotions{PromoId=3, PromoType="Pair", PromoDetails="C+D priced at 30", PrimarySKUId='C',SecondarySKUId='D', PromoPrice=30, PromoQty=1 }
             };
         }
         public void AddItemsToCart(char id, int qty)
